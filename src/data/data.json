@@ -7,7 +7,7 @@
     },
     "geometry": {
         "type": "Point",
-        "coordinates": [-58.5155126, -34.5282118 ]
+        "coordinates": [-38.4160957, -63.6166725 ]
     },
     "features": [
         {
@@ -33,8 +33,100 @@
               ]
             },
             "properties": {
-                "lugar": "hospital que se yo"
+                "lugar": ""
             }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -64.1810532,
+              -31.4134998
+            ]
+          },
+          "properties": {
+              "lugar": ""
+          }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -62.9966812,
+            -40.8134499
+          ]
+        },
+        "properties": {
+            "lugar": ""
         }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.54722,
+            -34.57222
+          ]
+        },
+        "properties": {
+            "lugar": "San Martin"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -66.3356323,
+            -33.2950096
+          ]
+        },
+        "properties": {
+            "lugar": "San Luis"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.9838905,
+            -27.4605598
+          ]
+        },
+        "properties": {
+            "lugar": "Resistencia - Chaco"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.984808,
+            -27.459946
+          ]
+        },
+        "properties": {
+            "lugar": "Resistencia - Chaco"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.3772316,
+            -34.6131516
+          ]
+        },
+        "properties": {
+            "lugar": "CABA"
+        }
+      }
+
     ]
 }
