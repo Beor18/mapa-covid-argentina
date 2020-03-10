@@ -40,13 +40,13 @@ export default function App() {
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12}>
-                <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> 118.099</h2>
+                <Paper className={classes.paper} style={{backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
+                  <h2>CURADOS <br></br> 0</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12}>
-                <Paper className={classes.paper} style={{backgroundColor: "#222", color: "#fff"}}>
-                  <h3> ALGO MÁS ??? <br></br>0</h3>
+                <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
+                  <h2>TOTAL MUNDO <br></br> 118.099</h2>
                 </Paper>
               </Grid>
             </Grid>
