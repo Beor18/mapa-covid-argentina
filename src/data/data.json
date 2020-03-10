@@ -1,0 +1,40 @@
+{
+    "type": "Feature",
+    "properties": {
+        "name": "Un nombre",
+        "amenity": "Un Contenido",
+        "popupContent": "Un popup contenido"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-58.5155126, -34.5282118 ]
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -58.4016157,
+                -34.5922517
+              ]
+            },
+            "properties": {
+                "lugar": "hospital aleman"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -58.5155126,
+                -34.5282118
+              ]
+            },
+            "properties": {
+                "lugar": "hospital que se yo"
+            }
+        }
+    ]
+}
