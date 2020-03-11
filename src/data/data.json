@@ -23,7 +23,7 @@
         ]
       },
       "properties": {
-        "lugar": "hospital aleman"
+        "lugar": "Hospital Aleman"
       }
     },
     {
@@ -36,7 +36,7 @@
         ]
       },
       "properties": {
-        "lugar": ""
+        "lugar": "Vicente López - Buenos Aires"
       }
     },
     {
@@ -49,7 +49,7 @@
         ]
       },
       "properties": {
-        "lugar": ""
+        "lugar": "Córdoba"
       }
     },
     {
@@ -62,7 +62,7 @@
         ]
       },
       "properties": {
-        "lugar": ""
+        "lugar": "Viedma - Río Negro"
       }
     },
     {
@@ -75,7 +75,7 @@
         ]
       },
       "properties": {
-        "lugar": "San Martin"
+        "lugar": "San Martin - Buenos Aires"
       }
     },
     {
@@ -140,7 +140,7 @@
         ]
       },
       "properties": {
-        "lugar": "LA Matanza"
+        "lugar": "La Matanza - Buenos Aires"
       }
     }
   ]

@@ -2,11 +2,11 @@ import React from 'react';
 import { GeoJSON } from 'react-leaflet';
 
 export default function GeoJsonComponent(props) {
-    const handleOnEachFeature = (feature, layer) => {
+    const handleOnEachFeature = (features, layer) => {
       let popupContent = "";
-      if (props.popupContent.length) popupContent = props.popupContent;
-      else if (feature.properties && feature.properties.popupContent) {
-        popupContent = feature.properties.popupContent;
+      if (props.popupContent.length) popupContent = features.properties.lugar;
+      else if (features.properties && features.properties.popupContent) {
+        popupContent = features.properties.popupContent;
       }
   
       layer.bindPopup(popupContent);
