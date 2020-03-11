@@ -34,12 +34,12 @@ export default function App() {
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <Paper className={classes.paper} style={{backgroundColor: "#222", color: "#fff"}}>
               <h1>CORONAVIRUS ARGENTINA</h1>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <MuiAlert severity="error" elevation={6} variant="filled">
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
@@ -47,25 +47,25 @@ export default function App() {
              El Gobierno ultima los detalles del decreto que impondrá la cuarentena obligatoria
             </MuiAlert>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
             {/* ----- */}
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={12}>
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
                   <h2>CONFIRMADOS <br></br> 21</h2>
                 </Paper>
               </Grid>
-              <Grid item xs={12} sm={12}>
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
                   <h2>FALLECIDOS <br></br> 1</h2>
                 </Paper>
               </Grid>
-              <Grid item xs={12} sm={12}>
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
                   <h2>SANADOS <br></br> 0</h2>
                 </Paper>
               </Grid>
-              <Grid item xs={12} sm={12}>
+              <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
                   <h2>TOTAL MUNDO <br></br> 124.663</h2>
                 </Paper>
@@ -73,7 +73,7 @@ export default function App() {
             </Grid>
             {/* ----- */}
           </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
             <Moves />
           </Grid>
         </Grid>
