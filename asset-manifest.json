@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/mapa-covid-argentina/static/js/main.cfbc9ba0.chunk.js",
-    "main.js.map": "/mapa-covid-argentina/static/js/main.cfbc9ba0.chunk.js.map",
+    "main.js": "/mapa-covid-argentina/static/js/main.bc37ed97.chunk.js",
+    "main.js.map": "/mapa-covid-argentina/static/js/main.bc37ed97.chunk.js.map",
     "runtime-main.js": "/mapa-covid-argentina/static/js/runtime-main.1808c5dc.js",
     "runtime-main.js.map": "/mapa-covid-argentina/static/js/runtime-main.1808c5dc.js.map",
     "static/js/2.2427022c.chunk.js": "/mapa-covid-argentina/static/js/2.2427022c.chunk.js",
     "static/js/2.2427022c.chunk.js.map": "/mapa-covid-argentina/static/js/2.2427022c.chunk.js.map",
     "index.html": "/mapa-covid-argentina/index.html",
-    "precache-manifest.092de98a212f23939e2b23a577258178.js": "/mapa-covid-argentina/precache-manifest.092de98a212f23939e2b23a577258178.js",
+    "precache-manifest.0983ad2f36bb71eac46d3119bd41d561.js": "/mapa-covid-argentina/precache-manifest.0983ad2f36bb71eac46d3119bd41d561.js",
     "service-worker.js": "/mapa-covid-argentina/service-worker.js",
     "static/js/2.2427022c.chunk.js.LICENSE.txt": "/mapa-covid-argentina/static/js/2.2427022c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1808c5dc.js",
     "static/js/2.2427022c.chunk.js",
-    "static/js/main.cfbc9ba0.chunk.js"
+    "static/js/main.bc37ed97.chunk.js"
   ]
 }
