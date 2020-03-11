@@ -60,7 +60,7 @@ const Moves = props => {
 Moves.defaultProps = {
   center: [-38.4160957, -63.6166725],
   zoom: 4,
-  url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+  url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=66df5636-eada-4c1f-b7c1-b82823103b37'
 };
 
 export default Moves;
