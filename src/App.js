@@ -31,7 +31,7 @@ export default function App() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>CONFIRMADOS <br></br> 17</h2>
+                  <h2>CONFIRMADOS <br></br> 19</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12}>

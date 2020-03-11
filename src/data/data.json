@@ -126,6 +126,19 @@
         "properties": {
             "lugar": "CABA"
         }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -58.7575843,
+            -34.7728556
+          ]
+        },
+        "properties": {
+            "lugar": "LA Matanza"
+        }
       }
 
     ]
