@@ -6,7 +6,7 @@ import places2017 from '../data/data.json';
 
 const styles = {
   wrapper: {
-    height: 600,
+    height: '100%',
     width: '100%',
     margin: '0 auto',
     display: 'flex'
