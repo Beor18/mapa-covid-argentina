@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mapa-covid-argentina/precache-manifest.04ab8accc949c72b69fd5e29baceb3e6.js"
+  "/mapa-covid-argentina/precache-manifest.b443c54b62de8ca0d09612ff6ccaa375.js"
 );
 
 self.addEventListener('message', (event) => {
