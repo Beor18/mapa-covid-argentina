@@ -46,7 +46,7 @@ export default function App() {
               </Grid>
               <Grid item xs={12} sm={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> 118.101</h2>
+                  <h2>TOTAL MUNDO <br></br> 119.094</h2>
                 </Paper>
               </Grid>
             </Grid>
@@ -55,18 +55,6 @@ export default function App() {
           <Grid item xs={12} sm={8}>
             <Moves />
           </Grid>
-          {/* <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid> */}
         </Grid>
       </div>
     );
