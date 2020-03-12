@@ -37,7 +37,7 @@ export default function App() {
     useEffect(() => {
       const fetchData = async () => {
         const result = await Axios(
-          'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
+          'http://localhost:5000/api/v1/coronavirus',
         );
         setData(result.data);
       };
@@ -72,7 +72,7 @@ export default function App() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>CONFIRMADOS <br></br> 30</h2>
+                  <h2>CONFIRMADOS <br></br> {data && data.data && data.data[0] && data.data[0].confirmados}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -87,7 +87,7 @@ export default function App() {
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> 127.863</h2>
+                  <h2>TOTAL MUNDO <br></br> {data && data.data && data.data[0] && data.data[0].total_mundo}</h2>
                 </Paper>
               </Grid>
             </Grid>
