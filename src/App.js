@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import Axios from "axios";
 
 import Moves from './components/Map'
 
@@ -31,6 +31,17 @@ const useStyles = makeStyles(theme => ({
 
 export default function App() {
     const classes = useStyles();
+    const [data, setData] = useState({ items: {} });
+
+    useEffect(() => {
+      const fetchData = async () => {
+        const result = await Axios(
+          'https://d1q0nvr1cscr0c.cloudfront.net/Mam/coronavirus-mam.json',
+        );
+        setData(result.data);
+      };
+      fetchData();
+    }, []);
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
@@ -44,7 +55,7 @@ export default function App() {
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-              El Presidente finalmente establecerá por DNU la cuarentena obligatoria por el coronavirus
+              {data && data.items && data.items[0] && data.items[0].titulo}
             </MuiAlert>
           </Grid>
           <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
