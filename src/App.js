@@ -79,7 +79,7 @@ export default function App() {
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> 126.670</h2>
+                  <h2>TOTAL MUNDO <br></br> 127.863</h2>
                 </Paper>
               </Grid>
             </Grid>
