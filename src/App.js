@@ -32,16 +32,24 @@ const useStyles = makeStyles(theme => ({
 export default function App() {
     const classes = useStyles();
     const [data, setData] = useState({ items: {} });
+    // const [messageCount, setMessageCount] = useState(0);
 
     useEffect(() => {
       const fetchData = async () => {
         const result = await Axios(
           'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
         );
-        setData(result.data);
+        setData(result.data.total);
       };
       fetchData();
     }, []);
+
+    // useEffect(() => {
+    //   socket.on('FromTemperatura', payload => {
+    //     setMessageCount(messageCount);
+    //   });
+    //   console.log(messageCount)
+    // }, [messageCount]);
 
     return (
       <div className={classes.root}>
@@ -64,7 +72,7 @@ export default function App() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>CONFIRMADOS <br></br> 21</h2>
+                  <h2>CONFIRMADOS <br></br> 30</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
