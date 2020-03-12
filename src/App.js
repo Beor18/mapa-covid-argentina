@@ -64,7 +64,7 @@ export default function App() {
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-              {console.log(data && data.data && data.data[0] && data.data[0].titulo)}
+              {data && data.data && data.data[0] && data.data[0].titulo}
             </MuiAlert>
           </Grid>
           <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
