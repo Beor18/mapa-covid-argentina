@@ -42,6 +42,7 @@ export default function App() {
       };
       fetchData();
     }, []);
+    
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
