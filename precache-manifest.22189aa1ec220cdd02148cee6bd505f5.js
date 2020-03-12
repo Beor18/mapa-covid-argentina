@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "298d7186f7d94e8f4b979215c7b2f890",
+    "revision": "2b0a2ee13dda0325f7e02657b8a9fcce",
     "url": "/mapa-covid-argentina/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mapa-covid-argentina/static/js/2.7b89d29a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a5cb6369b24fb3b527f",
-    "url": "/mapa-covid-argentina/static/js/main.69ff969b.chunk.js"
+    "revision": "9959e6a53c8f2d6b3dc4",
+    "url": "/mapa-covid-argentina/static/js/main.7477dcc9.chunk.js"
   },
   {
     "revision": "4145a50cc322c9373b5b",
