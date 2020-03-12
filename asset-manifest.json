@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/mapa-covid-argentina/static/js/main.8a675f47.chunk.js",
-    "main.js.map": "/mapa-covid-argentina/static/js/main.8a675f47.chunk.js.map",
+    "main.js": "/mapa-covid-argentina/static/js/main.a982ac1d.chunk.js",
+    "main.js.map": "/mapa-covid-argentina/static/js/main.a982ac1d.chunk.js.map",
     "runtime-main.js": "/mapa-covid-argentina/static/js/runtime-main.1808c5dc.js",
     "runtime-main.js.map": "/mapa-covid-argentina/static/js/runtime-main.1808c5dc.js.map",
-    "static/js/2.3bda8997.chunk.js": "/mapa-covid-argentina/static/js/2.3bda8997.chunk.js",
-    "static/js/2.3bda8997.chunk.js.map": "/mapa-covid-argentina/static/js/2.3bda8997.chunk.js.map",
+    "static/js/2.7b89d29a.chunk.js": "/mapa-covid-argentina/static/js/2.7b89d29a.chunk.js",
+    "static/js/2.7b89d29a.chunk.js.map": "/mapa-covid-argentina/static/js/2.7b89d29a.chunk.js.map",
     "index.html": "/mapa-covid-argentina/index.html",
-    "precache-manifest.05830fc7b804c3fd4298035fbaf96353.js": "/mapa-covid-argentina/precache-manifest.05830fc7b804c3fd4298035fbaf96353.js",
+    "precache-manifest.74ce67f83b671e7d718511fbdfd2ae4d.js": "/mapa-covid-argentina/precache-manifest.74ce67f83b671e7d718511fbdfd2ae4d.js",
     "service-worker.js": "/mapa-covid-argentina/service-worker.js",
-    "static/js/2.3bda8997.chunk.js.LICENSE.txt": "/mapa-covid-argentina/static/js/2.3bda8997.chunk.js.LICENSE.txt"
+    "static/js/2.7b89d29a.chunk.js.LICENSE.txt": "/mapa-covid-argentina/static/js/2.7b89d29a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1808c5dc.js",
-    "static/js/2.3bda8997.chunk.js",
-    "static/js/main.8a675f47.chunk.js"
+    "static/js/2.7b89d29a.chunk.js",
+    "static/js/main.a982ac1d.chunk.js"
   ]
 }
