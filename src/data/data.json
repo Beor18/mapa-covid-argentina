@@ -142,6 +142,19 @@
       "properties": {
         "lugar": "La Matanza - Buenos Aires"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -57.5575409,
+          -38.0022812
+        ]
+      },
+      "properties": {
+        "lugar": "Mar Del Plata - Buenos Aires"
+      }
     }
   ]
 }
