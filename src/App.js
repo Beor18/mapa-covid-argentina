@@ -37,7 +37,7 @@ export default function App() {
     useEffect(() => {
       const fetchData = async () => {
         const result = await Axios(
-          'https://https://almundo-examen.herokuapp.com/api/v1/coronavirus',
+          'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
         );
         setData(result.data);
       };
