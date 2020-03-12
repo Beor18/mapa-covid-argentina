@@ -44,7 +44,7 @@ export default function App() {
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-             El Gobierno ultima los detalles del decreto que impondrá la cuarentena obligatoria
+              El Presidente finalmente establecerá por DNU la cuarentena obligatoria por el coronavirus
             </MuiAlert>
           </Grid>
           <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
