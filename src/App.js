@@ -7,6 +7,9 @@ import Axios from "axios";
 
 import Moves from './components/Map'
 
+// const io = require('socket.io-client');
+// const socket = io('http://localhost:5000/api/v1/coronavirus');
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -82,7 +85,7 @@ export default function App() {
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>RECUPERADOS <br></br> 0</h2>
+                  <h2>RECUPERADOS <br></br> {data && data.data && data.data[0] && data.data[0].recuperados}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
