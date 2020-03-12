@@ -36,13 +36,13 @@ export default function App() {
     useEffect(() => {
       const fetchData = async () => {
         const result = await Axios(
-          'https://d1q0nvr1cscr0c.cloudfront.net/Mam/coronavirus-mam.json',
+          'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
         );
         setData(result.data);
       };
       fetchData();
     }, []);
-    
+
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
@@ -56,7 +56,7 @@ export default function App() {
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-              {data && data.items && data.items[0] && data.items[0].titulo}
+              {data && data.data && data.data.titulo}
             </MuiAlert>
           </Grid>
           <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
