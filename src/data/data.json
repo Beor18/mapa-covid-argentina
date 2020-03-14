@@ -155,6 +155,19 @@
       "properties": {
         "lugar": "Mar Del Plata - Buenos Aires"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7000008,
+          -31.6333294
+        ]
+      },
+      "properties": {
+        "lugar": "Santa Fe"
+      }
     }
   ]
 }
