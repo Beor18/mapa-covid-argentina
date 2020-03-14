@@ -4,11 +4,9 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import MuiAlert from '@material-ui/lab/Alert';
 import Axios from "axios";
+import socketIOClient from "socket.io-client";
 
 import Moves from './components/Map'
-
-// const io = require('socket.io-client');
-// const socket = io('http://localhost:5000/api/v1/coronavirus');
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 export default function App() {
     const classes = useStyles();
     const [data, setData] = useState({ items: {} });
-    // const [messageCount, setMessageCount] = useState(0);
+    const [confirma, setConfirma] = useState({});
 
     useEffect(() => {
       const fetchData = async () => {
@@ -47,13 +45,12 @@ export default function App() {
       fetchData();
     }, []);
 
-    // useEffect(() => {
-    //   socket.on('FromTemperatura', payload => {
-    //     setMessageCount(messageCount);
-    //   });
-    //   console.log(messageCount)
-    // }, [messageCount]);
-
+    useEffect( () => {
+      const socket = socketIOClient('https://almundo-examen.herokuapp.com');
+      socket.on("FromTemperatura", e => {
+        setConfirma(e)
+      })
+    }, [])
     return (
       <div className={classes.root}>
         <Grid container spacing={2}>
@@ -67,30 +64,31 @@ export default function App() {
               LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-              {data && data.data && data.data[0] && data.data[0].titulo}
+              {confirma.titulo}
             </MuiAlert>
           </Grid>
+          
           <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
             {/* ----- */}
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>CONFIRMADOS <br></br> {data && data.data && data.data[0] && data.data[0].confirmados}</h2>
+                  <h2>CONFIRMADOS <br></br> {confirma.confirmados}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>FALLECIDOS <br></br> {data && data.data && data.data[0] && data.data[0].fallecidos}</h2>
+                  <h2>FALLECIDOS <br></br> {confirma.fallecidos}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>RECUPERADOS <br></br> {data && data.data && data.data[0] && data.data[0].recuperados}</h2>
+                  <h2>RECUPERADOS <br></br> {confirma.recuperados}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> {data && data.data && data.data[0] && data.data[0].total_mundo}</h2>
+                  <h2>TOTAL MUNDO <br></br> {confirma.total_mundo}</h2>
                 </Paper>
               </Grid>
             </Grid>
@@ -100,6 +98,6 @@ export default function App() {
             <Moves />
           </Grid>
         </Grid>
-      </div>
-    );
+        </div>    
+        );
  }
