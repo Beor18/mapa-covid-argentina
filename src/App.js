@@ -56,7 +56,7 @@ export default function App() {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <Paper className={classes.paper} style={{backgroundColor: "#222", color: "#fff", padding: '3px', lineHeight: '28px'}}>
-              <h1>CORONAVIRUS ARGENTINA <br></br> <span style={{fontSize: '12px'}}>DATOS ACTUALIZADOS: {confirma.date}</span></h1>
+              <h1>CORONAVIRUS ARGENTINA <br></br> <span style={{fontSize: '12px'}}>ÚLTIMA ACTUALIZACIÓN: {confirma.date}</span></h1>
             </Paper>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
