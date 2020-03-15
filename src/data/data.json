@@ -168,6 +168,19 @@
       "properties": {
         "lugar": "Santa Fe"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.3000031,
+          -54.7999992
+        ]
+      },
+      "properties": {
+        "lugar": "Tierra del Fuego"
+      }
     }
   ]
 }
