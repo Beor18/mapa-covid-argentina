@@ -61,10 +61,10 @@ export default function App() {
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <MuiAlert severity="error" elevation={6} variant="filled">
-              LA OMS DECLARÓ EL CORONAVIRUS COMO PANDEMIA
+              Disculpé las molestias! Si no carga los datos es por las miles de visitas que estamos recibiendo!
             </MuiAlert>
             <MuiAlert severity="info" elevation={6} variant="filled" className={classes.alerta}>
-              {confirma.titulo}
+              {confirma.titulo ? confirma.titulo : 'Estamos mejorando para que tengan una mejor experiencia'}
             </MuiAlert>
           </Grid>
           

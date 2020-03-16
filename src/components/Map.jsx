@@ -34,6 +34,15 @@ const geojsonMarkerOptions2018 = {
   fillOpacity: 0.4
 };
 
+// const MyPosition = {
+//   radius: 4,
+//   fillColor: "#6E3BFB",
+//   color: "#000",
+//   weight: 2,
+//   opacity: 1,
+//   fillOpacity: 0.4
+// };
+
 const pointToLayer2017 = (feature, latlng) => {
   return L.circleMarker(latlng, geojsonMarkerOptions2017);
 }
@@ -42,7 +51,12 @@ const pointToLayer2018 = (feature, latlng) => {
   return L.circleMarker(latlng, geojsonMarkerOptions2018);
 }
 
-const Moves = props => {
+// const Location = navigator.geolocation.getCurrentPosition((location) => {
+//   let latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
+//   return L.circleMarker(latlng, MyPosition);
+// });
+
+const Moves = props => { 
   return (
     <div style={styles.wrapper}>
       <Map style={styles.map} center={props.center} zoom={props.zoom}>
