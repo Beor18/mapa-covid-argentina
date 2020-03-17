@@ -38,7 +38,7 @@ export default function App() {
     useEffect(() => {
       const fetchData = async () => {
         const result = await Axios(
-          'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
+          'http://coronavirusargentina-env-1.eba-2zxmdesj.us-east-1.elasticbeanstalk.com/api/v1/coronavirus',
         );
         setData(result.data);
       };
@@ -46,7 +46,7 @@ export default function App() {
     }, []);
 
     useEffect( () => {
-      const socket = socketIOClient('https://almundo-examen.herokuapp.com');
+      const socket = socketIOClient('http://coronavirusargentina-env-1.eba-2zxmdesj.us-east-1.elasticbeanstalk.com');
       socket.on("FromTemperatura", e => {
         setConfirma(e)
       })
