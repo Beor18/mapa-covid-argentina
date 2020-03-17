@@ -1,10 +1,9 @@
-import React from 'react';
-import { Map, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
+import React, { useEffect, useRef } from "react";
+import L from "leaflet";
 import GeoJsonComponent from '../components/GeoJsonComponent';
 import places2017 from '../data/data.json';
 
-const styles = {
+const style = {
   wrapper: {
     height: '100%',
     width: '100%',
@@ -34,47 +33,41 @@ const geojsonMarkerOptions2018 = {
   fillOpacity: 0.4
 };
 
-// const MyPosition = {
-//   radius: 4,
-//   fillColor: "#6E3BFB",
-//   color: "#000",
-//   weight: 2,
-//   opacity: 1,
-//   fillOpacity: 0.4
-// };
+function Map({ markerPosition }) {
+  
+  const pointToLayer2017 = (feature, latlng) => {
+    return L.circleMarker(latlng, geojsonMarkerOptions2017);
+  }
+  
+  const mapRef = useRef(null);
+  useEffect(() => {
+    mapRef.current = L.map("map", {
+      center: [-38.4160957, -63.6166725],
+      zoom: 4,
+      layers: [
+        L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+      ]
+    });
+  }, []);
 
-const pointToLayer2017 = (feature, latlng) => {
-  return L.circleMarker(latlng, geojsonMarkerOptions2017);
-}
-
-const pointToLayer2018 = (feature, latlng) => {
-  return L.circleMarker(latlng, geojsonMarkerOptions2018);
-}
-
-// const Location = navigator.geolocation.getCurrentPosition((location) => {
-//   let latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
-//   return L.circleMarker(latlng, MyPosition);
-// });
-
-const Moves = props => { 
-  return (
-    <div style={styles.wrapper}>
-      <Map style={styles.map} center={props.center} zoom={props.zoom}>
-        <TileLayer url={props.url} />
-        <GeoJsonComponent
-          popupContent={"Un contenido"}
-          data={places2017}
-          pointToLayer={pointToLayer2017}
-        />
-      </Map>
-    </div>
+  // add marker
+  const markerRef = useRef(null);
+  useEffect(
+    () => {
+      navigator.geolocation.getCurrentPosition((markerPosition) => {
+        let latlng = new L.LatLng(markerPosition.coords.latitude, markerPosition.coords.longitude);
+        markerRef.current = L.marker(latlng).addTo(mapRef.current) && L.geoJSON(places2017, {
+          style: geojsonMarkerOptions2017, pointToLayer: pointToLayer2017
+        }).addTo(mapRef.current);
+      })
+    },
+    [markerPosition]
   );
+
+  return <div id="map" style={style.wrapper} />;
 }
 
-Moves.defaultProps = {
-  center: [-38.4160957, -63.6166725],
-  zoom: 4,
-  url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
-};
-
-export default Moves;
+export default Map;

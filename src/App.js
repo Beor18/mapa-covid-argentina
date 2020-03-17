@@ -6,7 +6,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import Axios from "axios";
 import socketIOClient from "socket.io-client";
 
-import Moves from './components/Map'
+import Map from './components/Map'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,6 +34,13 @@ export default function App() {
     const classes = useStyles();
     const [data, setData] = useState({ items: {} });
     const [confirma, setConfirma] = useState({});
+
+    const [markerPosition, setMarkerPosition] = useState({
+      lat: -38.4160957,
+      lng: -63.6166725
+    });
+
+    const { lat, lng } = markerPosition;
 
     useEffect(() => {
       const fetchData = async () => {
@@ -95,7 +102,7 @@ export default function App() {
             {/* ----- */}
           </Grid>
           <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
-            <Moves />
+            <Map markerPosition={markerPosition}> </Map>
           </Grid>
         </Grid>
         </div>    
