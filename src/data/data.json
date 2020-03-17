@@ -181,6 +181,45 @@
       "properties": {
         "lugar": "Tierra del Fuego"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.4116592,
+          -24.7859001
+        ]
+      },
+      "properties": {
+        "lugar": "Salta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.2971191,
+          -24.1945705
+        ]
+      },
+      "properties": {
+        "lugar": "Jujuy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.2768200,
+          -50.3407500
+        ]
+      },
+      "properties": {
+        "lugar": "El Calafate - Santa Cruz"
+      }
     }
   ]
 }
