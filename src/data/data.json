@@ -220,6 +220,19 @@
       "properties": {
         "lugar": "El Calafate - Santa Cruz"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5237999,
+          -31.7319698
+        ]
+      },
+      "properties": {
+        "lugar": "Entre Rios"
+      }
     }
   ]
 }
