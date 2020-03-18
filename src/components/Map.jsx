@@ -23,15 +23,6 @@ const geojsonMarkerOptions2017 = {
   fillOpacity: 0.4
 };
 
-// const geojsonMarkerOptions2018 = {
-//   radius: 4,
-//   fillColor: "#6E3BFB",
-//   color: "#000",
-//   weight: 2,
-//   opacity: 1,
-//   fillOpacity: 0.4
-// };
-
 function Map({ markerPosition }) {
   
   const pointToLayer2017 = (feature, latlng) => {
@@ -60,7 +51,7 @@ function Map({ markerPosition }) {
       center: [-38.4160957, -63.6166725],
       zoom: 4,
       layers: [
-        L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+        L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png", {
           attribution:
             '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         })
@@ -68,13 +59,12 @@ function Map({ markerPosition }) {
     });
   }, []);
 
-  // add marker
   const markerRef = useRef(null);
   useEffect(
     () => {
       navigator.geolocation.getCurrentPosition((markerPosition) => {
         let latlng = new L.LatLng(markerPosition.coords.latitude, markerPosition.coords.longitude);
-        markerRef.current = L.marker(latlng).addTo(mapRef.current).bindPopup("Mi posición") && L.geoJSON(places2017, {
+        markerRef.current = L.marker(latlng).addTo(mapRef.current).bindPopup("Mi posición").openPopup() && L.geoJSON(places2017, {
           style: geojsonMarkerOptions2017, pointToLayer: pointToLayer2017, onEachFeature: handleOnEachFeature
         }).addTo(mapRef.current);
       })
@@ -82,7 +72,7 @@ function Map({ markerPosition }) {
     [markerPosition]
   );
 
-  return <div id="map" style={style.wrapper} />;
+  return <div style={style.wrapper}><div id="map" style={style.map} /> </div>;
 }
 
 export default Map;

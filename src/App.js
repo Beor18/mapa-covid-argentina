@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import MuiAlert from '@material-ui/lab/Alert';
-import Axios from "axios";
+// import Axios from "axios";
 import socketIOClient from "socket.io-client";
 
 import Map from './components/Map'
@@ -27,12 +27,22 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     color: "#fff", 
     fontWeight: 500
+  },
+  mapa: {
+    [theme.breakpoints.down('xs', 'sm')]: {
+      padding: '50px',
+      height: '50vh'
+    }
+  },
+  cargando: {
+    fontSize: '15px',
+    fontWeight: 300
   }
 }));
 
 export default function App() {
     const classes = useStyles();
-    const [data, setData] = useState({ items: {} });
+    // const [data, setData] = useState({ items: {} });
     const [confirma, setConfirma] = useState({});
 
     const [markerPosition, setMarkerPosition] = useState({
@@ -41,19 +51,19 @@ export default function App() {
     });
 
     const { lat, lng } = markerPosition;
-
-    useEffect(() => {
-      const fetchData = async () => {
-        const result = await Axios(
-          'https://almundo-examen.herokuapp.com/api/v1/coronavirus',
-        );
-        setData(result.data);
-      };
-      fetchData();
-    }, []);
+    const cargando = 'cargando datos...'
+    // useEffect(() => {
+    //   const fetchData = async () => {
+    //     const result = await Axios(
+    //       'https://sunny-studio-271511.appspot.com/api/v1/coronavirus',
+    //     );
+    //     setData(result.data);
+    //   };
+    //   fetchData();
+    // }, []);
 
     useEffect( () => {
-      const socket = socketIOClient('https://almundo-examen.herokuapp.com');
+      const socket = socketIOClient('https://sunny-studio-271511.appspot.com');
       socket.on("FromTemperatura", e => {
         setConfirma(e)
       })
@@ -80,28 +90,28 @@ export default function App() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>CONFIRMADOS <br></br> {confirma.confirmados}</h2>
+                  <h2>CONFIRMADOS <br></br> {confirma.confirmados ? confirma.confirmados : <span className={classes.cargando}>{cargando}</span>}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.2em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>FALLECIDOS <br></br> {confirma.fallecidos}</h2>
+                  <h2>FALLECIDOS <br></br> {confirma.fallecidos ? confirma.fallecidos : <span className={classes.cargando}>{cargando}</span>}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{backgroundColor: "#222", color: "rgb(112, 168, 0)"}}>
-                  <h2>RECUPERADOS <br></br> {confirma.recuperados}</h2>
+                  <h2>RECUPERADOS <br></br> {confirma.recuperados ? confirma.recuperados : <span className={classes.cargando}>{cargando}</span>}</h2>
                 </Paper>
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Paper className={classes.paper} style={{fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold"}}>
-                  <h2>TOTAL MUNDO <br></br> {confirma.total_mundo}</h2>
+                  <h2>TOTAL MUNDO <br></br> {confirma.total_mundo ? confirma.total_mundo : <span className={classes.cargando}>{cargando}</span>}</h2>
                 </Paper>
               </Grid>
             </Grid>
             {/* ----- */}
           </Grid>
-          <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+          <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className={classes.mapa}>
             <Map markerPosition={markerPosition}> </Map>
           </Grid>
         </Grid>
