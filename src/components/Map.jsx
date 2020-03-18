@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import L from "leaflet";
-import GeoJsonComponent from '../components/GeoJsonComponent';
 import places2017 from '../data/data.json';
 
 const style = {
@@ -24,20 +23,36 @@ const geojsonMarkerOptions2017 = {
   fillOpacity: 0.4
 };
 
-const geojsonMarkerOptions2018 = {
-  radius: 4,
-  fillColor: "#6E3BFB",
-  color: "#000",
-  weight: 2,
-  opacity: 1,
-  fillOpacity: 0.4
-};
+// const geojsonMarkerOptions2018 = {
+//   radius: 4,
+//   fillColor: "#6E3BFB",
+//   color: "#000",
+//   weight: 2,
+//   opacity: 1,
+//   fillOpacity: 0.4
+// };
 
 function Map({ markerPosition }) {
   
   const pointToLayer2017 = (feature, latlng) => {
     return L.circleMarker(latlng, geojsonMarkerOptions2017);
   }
+
+  const handleOnEachFeature = (features, layer) => {
+    let popupContent = "";
+    if (features.properties && features.properties.lugar) {
+      popupContent = features.properties.lugar
+    }
+    layer.bindPopup(popupContent);
+    layer.on({
+      mouseover: e => {
+        layer.openPopup();
+      },
+      mouseout: e => {
+        layer.closePopup();
+      }
+    });
+  };
   
   const mapRef = useRef(null);
   useEffect(() => {
@@ -59,8 +74,8 @@ function Map({ markerPosition }) {
     () => {
       navigator.geolocation.getCurrentPosition((markerPosition) => {
         let latlng = new L.LatLng(markerPosition.coords.latitude, markerPosition.coords.longitude);
-        markerRef.current = L.marker(latlng).addTo(mapRef.current) && L.geoJSON(places2017, {
-          style: geojsonMarkerOptions2017, pointToLayer: pointToLayer2017
+        markerRef.current = L.marker(latlng).addTo(mapRef.current).bindPopup("Mi posición") && L.geoJSON(places2017, {
+          style: geojsonMarkerOptions2017, pointToLayer: pointToLayer2017, onEachFeature: handleOnEachFeature
         }).addTo(mapRef.current);
       })
     },
