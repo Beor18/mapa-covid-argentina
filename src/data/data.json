@@ -233,6 +233,19 @@
       "properties": {
         "lugar": "Entre Rios"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.5000000,
+          -27.0000000
+        ]
+      },
+      "properties": {
+        "lugar": "Tucumán"
+      }
     }
   ]
 }
