@@ -246,6 +246,32 @@
       "properties": {
         "lugar": "Tucumán"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.8340988,
+          -27.4806004
+        ]
+      },
+      "properties": {
+        "lugar": "Corrientes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.0590973,
+          -38.9516106
+        ]
+      },
+      "properties": {
+        "lugar": "Neuquén"
+      }
     }
   ]
 }
