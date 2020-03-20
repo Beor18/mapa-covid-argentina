@@ -272,6 +272,19 @@
       "properties": {
         "lugar": "Neuquén"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2614899,
+          -27.7951107
+        ]
+      },
+      "properties": {
+        "lugar": "Santiago del Estero"
+      }
     }
   ]
 }
