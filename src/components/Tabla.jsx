@@ -47,6 +47,7 @@ const rows = [
   createData('Río Negro', '', '', 3, 0, 1),
   createData('Neuquén', '', '', 2, 0, 0),
   createData('Santa Fe', '', '', 2, 0, 0),
+  createData('Mendoza', '', '', 1, 0, 0),
   createData('San Luis', '', '', 1, 0, 0),
   createData('Santiago del Estero', '', '', 1, 0, 0),
   createData('Corrientes', '', '', 1, 0, 0),
