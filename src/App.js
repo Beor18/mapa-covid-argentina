@@ -6,6 +6,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 // import Axios from "axios";
 import socketIOClient from "socket.io-client";
 
+import Tabla from './components/Tabla'
 import Map from './components/Map'
 
 const useStyles = makeStyles(theme => ({
@@ -113,6 +114,9 @@ export default function App() {
           </Grid>
           <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className={classes.mapa}>
             <Map markerPosition={markerPosition}> </Map>
+          </Grid>
+          <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Tabla />
           </Grid>
         </Grid>
         </div>    
