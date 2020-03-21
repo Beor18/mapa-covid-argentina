@@ -42,7 +42,7 @@ const rows = [
   createData('Buenos Aires', '', '', 44, 1, 1),
   createData('Chaco', '', '', 16, 1, 0),
   createData('Córdoba', '', '', 13, 0, 0),
-  createData('Tierra del Fuego', '', '', 3, 0, 0),
+  createData('Tierra del Fuego', '', '', 6, 0, 0),
   createData('Entre Ríos', '', '', 3, 0, 0),
   createData('Río Negro', '', '', 3, 0, 1),
   createData('Neuquén', '', '', 2, 0, 0),
