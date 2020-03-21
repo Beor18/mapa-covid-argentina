@@ -285,6 +285,19 @@
       "properties": {
         "lugar": "Santiago del Estero"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8271713,
+          -32.8908386
+        ]
+      },
+      "properties": {
+        "lugar": "Mendoza"
+      }
     }
   ]
 }
