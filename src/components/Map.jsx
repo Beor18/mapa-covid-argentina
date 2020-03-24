@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import places2017 from '../data/data.json';
+//import axios from "axios";
 
 const style = {
   wrapper: {
@@ -23,8 +24,20 @@ const geojsonMarkerOptions2017 = {
   fillOpacity: 0.4
 };
 
-function Map({ markerPosition }) {
-  
+export default function Map({ markerPosition }) {
+
+  // const [data, setData] = useState(null);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/api/v1/coronavirus/argentina")
+  //     .then(res => res.json())
+  //     .then(response => {
+  //       console.log('response ', response)
+  //       setData(response)
+  //     });
+  // }, [data])
+
+  // console.log('platz eins -- 02', data)
+
   const pointToLayer2017 = (feature, latlng) => {
     return L.circleMarker(latlng, geojsonMarkerOptions2017);
   }
@@ -44,7 +57,7 @@ function Map({ markerPosition }) {
       }
     });
   };
-  
+
   const mapRef = useRef(null);
   useEffect(() => {
     mapRef.current = L.map("map", {
@@ -74,5 +87,3 @@ function Map({ markerPosition }) {
 
   return <div style={style.wrapper}><div id="map" style={style.map} /> </div>;
 }
-
-export default Map;

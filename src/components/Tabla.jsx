@@ -38,23 +38,24 @@ function createData(provincia, municipalidad, barrio_ciudad, confirmados, fallec
 }
 
 const rows = [
-  createData('CABA', '', '', 94, 2, 25),
-  createData('Buenos Aires', '', '', 59, 1, 1),
-  createData('Chaco', '', '', 21, 1, 0),
-  createData('Córdoba', '', '', 17, 0, 0),
+  createData('CABA', '', '', 117, 2, 25),
+  createData('Buenos Aires', '', '', 72, 2, 1),
+  createData('Chaco', '', '', 32, 2, 0),
+  createData('Córdoba', '', '', 27, 0, 0),
   createData('Tierra del Fuego', '', '', 6, 0, 0),
   createData('Entre Ríos', '', '', 5, 0, 0),
   createData('Río Negro', '', '', 4, 0, 1),
   createData('Neuquén', '', '', 2, 0, 0),
-  createData('Santa Fe', '', '', 4, 0, 0),
+  createData('Santa Fe', '', '', 17, 0, 0),
   createData('Mendoza', '', '', 5, 0, 0),
   createData('San Luis', '', '', 1, 0, 0),
   createData('Santiago del Estero', '', '', 1, 0, 0),
   createData('Corrientes', '', '', 1, 0, 0),
-  createData('Tucumán', '', '', 1, 0, 0),
+  createData('Tucumán', '', '', 7, 0, 0),
   createData('Santa Cruz', '', '', 1, 0, 0),
   createData('Salta', '', '', 1, 0, 0),
   createData('Jujuy', '', '', 1, 0, 0),
+  createData('La Pampa', '', '', 1, 0, 0),
 ];
 
 const useStyles = makeStyles({

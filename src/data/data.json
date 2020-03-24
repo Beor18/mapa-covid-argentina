@@ -298,6 +298,19 @@
       "properties": {
         "lugar": "Mendoza"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2833328,
+          -36.6166687
+        ]
+      },
+      "properties": {
+        "lugar": "La Pampa"
+      }
     }
   ]
 }
