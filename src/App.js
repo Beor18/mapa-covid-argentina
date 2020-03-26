@@ -51,7 +51,7 @@ export default function App() {
       lng: -63.6166725
     });
 
-    const { lat, lng } = markerPosition;
+    //const { lat, lng } = markerPosition;
     const cargando = 'cargando datos...'
     // useEffect(() => {
     //   const fetchData = async () => {
