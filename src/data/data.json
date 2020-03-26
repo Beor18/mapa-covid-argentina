@@ -311,6 +311,19 @@
       "properties": {
         "lugar": "La Pampa"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -55.89608,
+          -27.3670807
+        ]
+      },
+      "properties": {
+        "lugar": "Misiones"
+      }
     }
   ]
 }
