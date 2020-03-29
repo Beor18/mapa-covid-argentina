@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import L from "leaflet";
-import places2017 from '../data/data.json';
-//import axios from "axios";
+import socketIOClient from "socket.io-client";
+import { URL } from './../data/config';
 
 const style = {
   wrapper: {
@@ -26,17 +26,13 @@ const geojsonMarkerOptions2017 = {
 
 export default function Map({ markerPosition }) {
 
-  // const [data, setData] = useState(null);
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/api/v1/coronavirus/argentina")
-  //     .then(res => res.json())
-  //     .then(response => {
-  //       console.log('response ', response)
-  //       setData(response)
-  //     });
-  // }, [data])
-
-  // console.log('platz eins -- 02', data)
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const socket = socketIOClient(URL);
+    socket.on("FromMapa", e => {
+      setData(e)
+    })
+  }, [])
 
   const pointToLayer2017 = (feature, latlng) => {
     return L.circleMarker(latlng, geojsonMarkerOptions2017);
@@ -77,12 +73,12 @@ export default function Map({ markerPosition }) {
     () => {
       navigator.geolocation.getCurrentPosition((markerPosition) => {
         let latlng = new L.LatLng(markerPosition.coords.latitude, markerPosition.coords.longitude);
-        markerRef.current = L.marker(latlng).addTo(mapRef.current).bindPopup("Mi posición").openPopup() && L.geoJSON(places2017, {
+        markerRef.current = L.marker(latlng).addTo(mapRef.current).bindPopup("Mi posición").openPopup() && L.geoJSON(data, {
           style: geojsonMarkerOptions2017, pointToLayer: pointToLayer2017, onEachFeature: handleOnEachFeature
         }).addTo(mapRef.current);
       })
     },
-    [markerPosition]
+    [markerPosition, data]
   );
 
   return <div style={style.wrapper}><div id="map" style={style.map} /> </div>;

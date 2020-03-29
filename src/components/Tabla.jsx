@@ -11,8 +11,8 @@ import TableRow from '@material-ui/core/TableRow';
 
 const columns = [
   { id: 'provincia', label: 'Provincia', minWidth: 150 },
-//   { id: 'municipalidad', label: 'Municipalidad', minWidth: 150 },
-//   { id: 'barrio_ciudad', label: 'Ciudad / Barrio', minWidth: 150 },
+  //   { id: 'municipalidad', label: 'Municipalidad', minWidth: 150 },
+  //   { id: 'barrio_ciudad', label: 'Ciudad / Barrio', minWidth: 150 },
   {
     id: 'confirmados',
     label: 'Confirmados',
@@ -25,12 +25,12 @@ const columns = [
     minWidth: 150,
     align: 'center'
   },
-//   {
-//     id: 'recuperados',
-//     label: 'Recuperados',
-//     minWidth: 170,
-//     align: 'center'
-//   },
+  //   {
+  //     id: 'recuperados',
+  //     label: 'Recuperados',
+  //     minWidth: 170,
+  //     align: 'center'
+  //   },
 ];
 
 function createData(provincia, municipalidad, barrio_ciudad, confirmados, fallecidos, recuperados) {
@@ -66,10 +66,10 @@ const useStyles = makeStyles({
   container: {
     maxHeight: 440,
   },
-//   table_head: {
-//       backgroundColor: 'rgb(34, 34, 34)',
-//       color: '#fff'
-//   }
+  //   table_head: {
+  //       backgroundColor: 'rgb(34, 34, 34)',
+  //       color: '#fff'
+  //   }
 });
 
 export default function Tabla() {
