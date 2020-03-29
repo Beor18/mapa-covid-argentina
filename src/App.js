@@ -8,6 +8,7 @@ import { URL } from './data/config';
 
 import Tabla from './components/Tabla'
 import Map from './components/Map'
+import Estadistica from './components/Estadistica'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -104,8 +105,13 @@ export default function App() {
         <Grid item xs={12} sm={12} md={8} lg={8} xl={8} className={classes.mapa}>
           <Map markerPosition={markerPosition}> </Map>
         </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
           <Tabla />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Paper style={{padding: "15px"}}>
+            <Estadistica />
+          </Paper>
         </Grid>
       </Grid>
     </div>
