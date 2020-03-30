@@ -109,7 +109,7 @@ export default function App() {
           <Tabla />
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-          <Paper style={{padding: "15px"}}>
+          <Paper style={{padding: "15px", minHeight: "460px"}}>
             <Estadistica />
           </Paper>
         </Grid>

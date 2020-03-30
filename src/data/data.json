@@ -1,329 +1,167 @@
 {
-  "type": "Feature",
-  "properties": {
-    "name": "Un nombre",
-    "amenity": "Un Contenido",
-    "popupContent": "Un popup contenido"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -38.4160957,
-      -63.6166725
-    ]
-  },
-  "features": [
+  "datos": [
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.4016157,
-          -34.5922517
-        ]
-      },
-      "properties": {
-        "lugar": "CABA"
-      }
+      "positivos": 1,
+      "fallecidos": 0,
+      "fecha": "3 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.5155126,
-          -34.5282118
-        ]
-      },
-      "properties": {
-        "lugar": "Vicente López - Buenos Aires"
-      }
+      "positivos": 1,
+      "fallecidos": 0,
+      "fecha": "4 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.1810532,
-          -31.4134998
-        ]
-      },
-      "properties": {
-        "lugar": "Córdoba"
-      }
+      "positivos": 2,
+      "fallecidos": 0,
+      "fecha": "5 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -62.9966812,
-          -40.8134499
-        ]
-      },
-      "properties": {
-        "lugar": "Viedma - Río Negro"
-      }
+      "positivos": 8,
+      "fallecidos": 0,
+      "fecha": "6 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.54722,
-          -34.57222
-        ]
-      },
-      "properties": {
-        "lugar": "San Martin - Buenos Aires"
-      }
+      "positivos": 9,
+      "fallecidos": 1,
+      "fecha": "7 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.3356323,
-          -33.2950096
-        ]
-      },
-      "properties": {
-        "lugar": "San Luis"
-      }
+      "positivos": 12,
+      "fallecidos": 1,
+      "fecha": "8 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.9838905,
-          -27.4605598
-        ]
-      },
-      "properties": {
-        "lugar": "Resistencia - Chaco"
-      }
+      "positivos": 17,
+      "fallecidos": 1,
+      "fecha": "9 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.984808,
-          -27.459946
-        ]
-      },
-      "properties": {
-        "lugar": "Resistencia - Chaco"
-      }
+      "positivos": 19,
+      "fallecidos": 1,
+      "fecha": "10 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.3772316,
-          -34.6131516
-        ]
-      },
-      "properties": {
-        "lugar": "CABA"
-      }
+      "positivos": 21,
+      "fallecidos": 1,
+      "fecha": "11 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.757584,
-          -34.7728556
-        ]
-      },
-      "properties": {
-        "lugar": "La Matanza - Buenos Aires"
-      }
+      "positivos": 31,
+      "fallecidos": 1,
+      "fecha": "12 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -57.5575409,
-          -38.0022812
-        ]
-      },
-      "properties": {
-        "lugar": "Mar Del Plata - Buenos Aires"
-      }
+      "positivos": 34,
+      "fallecidos": 2,
+      "fecha": "13 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.7000008,
-          -31.6333294
-        ]
-      },
-      "properties": {
-        "lugar": "Santa Fe"
-      }
+      "positivos": 45,
+      "fallecidos": 2,
+      "fecha": "14 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.3000031,
-          -54.7999992
-        ]
-      },
-      "properties": {
-        "lugar": "Tierra del Fuego"
-      }
+      "positivos": 56,
+      "fallecidos": 2,
+      "fecha": "15 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.4116592,
-          -24.7859001
-        ]
-      },
-      "properties": {
-        "lugar": "Salta"
-      }
+      "positivos": 65,
+      "fallecidos": 2,
+      "fecha": "16 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.2971191,
-          -24.1945705
-        ]
-      },
-      "properties": {
-        "lugar": "Jujuy"
-      }
+      "positivos": 78,
+      "fallecidos": 2,
+      "fecha": "17 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.2768200,
-          -50.3407500
-        ]
-      },
-      "properties": {
-        "lugar": "El Calafate - Santa Cruz"
-      }
+      "positivos": 97,
+      "fallecidos": 3,
+      "fecha": "18 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.5237999,
-          -31.7319698
-        ]
-      },
-      "properties": {
-        "lugar": "Entre Rios"
-      }
+      "positivos": 128,
+      "fallecidos": 3,
+      "fecha": "19 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -65.5000000,
-          -27.0000000
-        ]
-      },
-      "properties": {
-        "lugar": "Tucumán"
-      }
+      "positivos": 158,
+      "fallecidos": 3,
+      "fecha": "20 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -58.8340988,
-          -27.4806004
-        ]
-      },
-      "properties": {
-        "lugar": "Corrientes"
-      }
+      "positivos": 225,
+      "fallecidos": 4,
+      "fecha": "21 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.0590973,
-          -38.9516106
-        ]
-      },
-      "properties": {
-        "lugar": "Neuquén"
-      }
+      "positivos": 265,
+      "fallecidos": 4,
+      "fecha": "22 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.2614899,
-          -27.7951107
-        ]
-      },
-      "properties": {
-        "lugar": "Santiago del Estero"
-      }
+      "positivos": 301,
+      "fallecidos": 4,
+      "fecha": "23 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.8271713,
-          -32.8908386
-        ]
-      },
-      "properties": {
-        "lugar": "Mendoza"
-      }
+      "positivos": 385,
+      "fallecidos": 6,
+      "fecha": "24 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.2833328,
-          -36.6166687
-        ]
-      },
-      "properties": {
-        "lugar": "La Pampa"
-      }
+      "positivos": 502,
+      "fallecidos": 9,
+      "fecha": "25 de Marzo"
     },
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -55.89608,
-          -27.3670807
-        ]
-      },
-      "properties": {
-        "lugar": "Misiones"
-      }
+      "positivos": 589,
+      "fallecidos": 12,
+      "fecha": "26 de Marzo"
+    },
+    {
+      "positivos": 690,
+      "fallecidos": 17,
+      "fecha": "27 de Marzo"
+    },
+    {
+      "positivos": 745,
+      "fallecidos": 19,
+      "fecha": "28 de Marzo"
+    },
+    {
+      "positivos": 820,
+      "fallecidos": 21,
+      "fecha": "29 de Marzo"
+    },
+    {
+      "fallecidos": 22,
+      "fecha": "30 de Marzo"
+    },
+    {
+      "fecha": "31 de Marzo"
+    },
+    {
+      "fecha": "1 de Abril"
+    },
+    {
+      "fecha": "2 de Abril"
+    },
+    {
+      "fecha": "3 de Abril"
+    },
+    {
+      "fecha": "4 de Abril"
+    },
+    {
+      "fecha": "5 de Abril"
+    },
+    {
+      "fecha": "6 de Abril"
+    },
+    {
+      "fecha": "7 de Abril"
     }
   ]
 }

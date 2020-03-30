@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import Chartjs from "chart.js";
+import data from '../data/data.json'
 
-
+console.log(data)
 const chartConfig = {
     type: "line",
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "siete"],
+        labels: data.datos.map(e => e.fecha),
         datasets: [
             {
                 label: "Fallecidos",
-                data: [1, 20, 25, 50, 130, 230, 420],
+                data: data.datos.map(e => e.fallecidos),
                 borderColor: [
                     "rgba(255, 99, 132, 1)"
                 ],
@@ -17,7 +18,7 @@ const chartConfig = {
             },
             {
                 label: "Confirmados",
-                data: [3, 35, 150, 200, 500, 540, 745],
+                data: data.datos.map(e => e.positivos),
                 borderColor: [
                     "rgb(112, 168, 0)"
                 ],
