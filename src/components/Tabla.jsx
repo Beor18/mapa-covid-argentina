@@ -38,26 +38,27 @@ function createData(provincia, municipalidad, barrio_ciudad, confirmados, fallec
 }
 
 const rows = [
-  createData('CABA', '', '', 245, 6, 25),
-  createData('Buenos Aires', '', '', 201, 7, 1),
-  createData('Chaco', '', '', 62, 4, 0),
-  createData('Córdoba', '', '', 55, 0, 0),
-  createData('Tierra del Fuego', '', '', 17, 0, 0),
+  createData('CABA', '', '', 258, 6, 25),
+  createData('Buenos Aires', '', '', 217, 7, 1),
+  createData('Chaco', '', '', 69, 4, 0),
+  createData('Córdoba', '', '', 73, 0, 0),
+  createData('Tierra del Fuego', '', '', 21, 0, 0),
   createData('Entre Ríos', '', '', 10, 0, 0),
   createData('Río Negro', '', '', 8, 0, 1),
   createData('Neuquén', '', '', 12, 1, 0),
-  createData('Santa Fe', '', '', 77, 0, 0),
-  createData('Mendoza', '', '', 9, 1, 0),
+  createData('Santa Fe', '', '', 90, 0, 0),
+  createData('Mendoza', '', '', 10, 1, 0),
   createData('San Luis', '', '', 6, 0, 0),
   createData('Santiago del Estero', '', '', 2, 0, 0),
   createData('Tucumán', '', '', 15, 0, 0),
   createData('Santa Cruz', '', '', 9, 0, 0),
-  createData('Corrientes', '', '', 8, 0, 0),
+  createData('Corrientes', '', '', 9, 0, 0),
   createData('Salta', '', '', 1, 0, 0),
   createData('Jujuy', '', '', 3, 0, 0),
-  createData('La Pampa', '', '', 1, 0, 0),
+  createData('La Pampa', '', '', 3, 0, 0),
   createData('Chubut', '', '', 3, 0, 0),
-  createData('Misiones', '', '', 1, 0, 0),
+  createData('Misiones', '', '', 2, 0, 0),
+  createData('San Juan', '', '', 1, 0, 0),
 ];
 
 const useStyles = makeStyles({
