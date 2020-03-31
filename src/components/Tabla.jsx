@@ -8,11 +8,12 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import axios from 'axios';
+import { URL_TABLA } from './../data/config';
 
 const columns = [
   { id: 'provincia', label: 'Provincia', minWidth: 150 },
-  //   { id: 'municipalidad', label: 'Municipalidad', minWidth: 150 },
-  //   { id: 'barrio_ciudad', label: 'Ciudad / Barrio', minWidth: 150 },
+  { id: 'ciudad', label: 'Ciudad', minWidth: 150 },
   {
     id: 'confirmados',
     label: 'Confirmados',
@@ -33,34 +34,6 @@ const columns = [
   //   },
 ];
 
-function createData(provincia, municipalidad, barrio_ciudad, confirmados, fallecidos, recuperados) {
-  return { provincia, municipalidad, barrio_ciudad, confirmados, fallecidos, recuperados };
-}
-
-const rows = [
-  createData('CABA', '', '', 258, 6, 25),
-  createData('Buenos Aires', '', '', 217, 8, 1),
-  createData('Chaco', '', '', 69, 4, 0),
-  createData('Córdoba', '', '', 73, 0, 0),
-  createData('Tierra del Fuego', '', '', 21, 0, 0),
-  createData('Entre Ríos', '', '', 10, 0, 0),
-  createData('Río Negro', '', '', 8, 0, 1),
-  createData('Neuquén', '', '', 12, 2, 0),
-  createData('Santa Fe', '', '', 90, 0, 0),
-  createData('Mendoza', '', '', 10, 1, 0),
-  createData('San Luis', '', '', 6, 0, 0),
-  createData('Santiago del Estero', '', '', 2, 0, 0),
-  createData('Tucumán', '', '', 15, 2, 0),
-  createData('Santa Cruz', '', '', 9, 0, 0),
-  createData('Corrientes', '', '', 9, 0, 0),
-  createData('Salta', '', '', 1, 0, 0),
-  createData('Jujuy', '', '', 3, 0, 0),
-  createData('La Pampa', '', '', 3, 0, 0),
-  createData('Chubut', '', '', 3, 0, 0),
-  createData('Misiones', '', '', 2, 0, 0),
-  createData('San Juan', '', '', 1, 0, 0),
-];
-
 const useStyles = makeStyles({
   root: {
     width: '100%',
@@ -78,6 +51,16 @@ export default function Tabla() {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const [tabla, setTabla] = React.useState([]);
+
+  React.useEffect(() => {
+      axios.get(URL_TABLA).then((res) => {
+        setTabla(res.data.tabla);
+      })
+  }, []);
+
+  const rows = tabla.map(e => e)
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -109,7 +92,7 @@ export default function Tabla() {
           <TableBody>
             {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
+                <TableRow hover role="checkbox" tabIndex={-1}>
                   {columns.map(column => {
                     const value = row[column.id];
                     return (
