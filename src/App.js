@@ -79,23 +79,28 @@ export default function App() {
         <Grid item xs={12} sm={4} md={4} lg={4} xl={4}>
           {/* ----- */}
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Paper className={classes.paper} style={{ fontSize: "1.2em", backgroundColor: "#222", color: "rgb(112, 168, 0)" }}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Paper className={classes.paper} style={{ fontSize: "1em", backgroundColor: "#222", color: "rgb(112, 168, 0)" }}>
                 <h2>CONFIRMADOS <br></br> {confirma.confirmados ? confirma.confirmados : <span className={classes.cargando}>{cargando}</span>}</h2>
               </Paper>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Paper className={classes.paper} style={{ fontSize: "1.2em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold" }}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Paper className={classes.paper} style={{ fontSize: "1em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold" }}>
                 <h2>FALLECIDOS <br></br> {confirma.fallecidos ? confirma.fallecidos : <span className={classes.cargando}>{cargando}</span>}</h2>
               </Paper>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Paper className={classes.paper} style={{ backgroundColor: "#222", color: "rgb(112, 168, 0)" }}>
                 <h2>RECUPERADOS <br></br> {confirma.recuperados ? confirma.recuperados : <span className={classes.cargando}>{cargando}</span>}</h2>
               </Paper>
             </Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+              <Paper className={classes.paper} style={{ backgroundColor: "#222", color: "rgb(112, 168, 0)" }}>
+                <h2>ACTIVOS <br></br> {confirma.activos ? confirma.activos : <span className={classes.cargando}>{cargando}</span>}</h2>
+              </Paper>
+            </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-              <Paper className={classes.paper} style={{ fontSize: "1.06em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold" }}>
+              <Paper className={classes.paper} style={{ fontSize: "1em", backgroundColor: "#222", color: "rgb(230, 0, 0)", fontWeight: "bold" }}>
                 <h2>TOTAL MUNDO <br></br> {confirma.total_mundo ? confirma.total_mundo : <span className={classes.cargando}>{cargando}</span>}</h2>
               </Paper>
             </Grid>
