@@ -166,6 +166,7 @@
       "fecha": "4 de Abril"
     },
     {
+      "fallecidos": 44,
       "fecha": "5 de Abril"
     },
     {
@@ -173,6 +174,24 @@
     },
     {
       "fecha": "7 de Abril"
+    },
+    {
+      "fecha": "8 de Abril"
+    },
+    {
+      "fecha": "9 de Abril"
+    },
+    {
+      "fecha": "10 de Abril"
+    },
+    {
+      "fecha": "11 de Abril"
+    },
+    {
+      "fecha": "12 de Abril"
+    },
+    {
+      "fecha": "13 de Abril"
     }
   ]
 }
