@@ -191,9 +191,12 @@
       "fecha": "9 de Abril"
     },
     {
+      "positivos": 1975,
+      "fallecidos": 82,
       "fecha": "10 de Abril"
     },
     {
+      "fallecidos": 83,
       "fecha": "11 de Abril"
     },
     {
